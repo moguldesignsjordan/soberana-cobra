@@ -7,7 +7,6 @@ import {
 
 // --- Components ---
 
-// 1. The "Firefly" Particle Component for the Hero
 const Fireflies = () => {
   const [fireflies, setFireflies] = useState([]);
 
@@ -51,7 +50,6 @@ const SoberanaLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-  // Animation Variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, type: "spring" } }
@@ -116,7 +114,6 @@ const SoberanaLanding = () => {
       <nav className="fixed w-full z-50 px-6 py-4 transition-all duration-300 backdrop-blur-lg bg-[#3a2e56]/80 shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           
-          {/* Logo Section */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative">
               <div className="absolute inset-0 bg-[#f0c755] rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity animate-pulse"></div>
@@ -135,7 +132,6 @@ const SoberanaLanding = () => {
             </div>
           </a>
 
-          {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8 text-sm font-medium text-gray-200 items-center">
             {['Philosophy', 'Coaching', 'Immersions', 'Contact'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-[#f0c755] transition-colors duration-300 uppercase tracking-widest text-xs lg:text-sm relative group">
@@ -151,13 +147,11 @@ const SoberanaLanding = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={32} className="text-[#f0c755]" /> : <Menu size={32} />}
           </button>
         </div>
 
-        {/* Mobile Nav Overlay */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div 
@@ -183,12 +177,8 @@ const SoberanaLanding = () => {
 
       {/* Hero Section */}
       <header className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Firefly Effects */}
         <Fireflies />
-
-        {/* Background & Gradients */}
         <div className="absolute inset-0 z-0">
-          {/* UPDATED GRADIENT: Fades to Deep Purple (#3a2e56) at bottom to match next section */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#3a2e56]/90 via-[#3a2e56]/30 to-[#3a2e56] z-10"></div>
           <img 
             src="/heroimg.png" 
@@ -223,7 +213,6 @@ const SoberanaLanding = () => {
             The path to sovereignty begins here. Reconnect with your deepest truth and honor the ancestors walking with you.
           </p>
           
-          {/* Added Gold Glow behind buttons for pop */}
           <div className="relative inline-block">
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-32 bg-[#f0c755] blur-[80px] opacity-20 pointer-events-none"></div>
              
@@ -252,7 +241,6 @@ const SoberanaLanding = () => {
 
       {/* Video / Intro Section */}
       <section className="py-24 px-6 bg-[#3a2e56] text-white relative overflow-hidden">
-        {/* Decorative Background Blobs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#f0c755] rounded-full mix-blend-overlay filter blur-[120px] opacity-20 animate-blob"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500 rounded-full mix-blend-overlay filter blur-[120px] opacity-20 animate-blob animation-delay-4000"></div>
 
@@ -368,7 +356,6 @@ const SoberanaLanding = () => {
             ))}
           </div>
 
-          {/* Transformation Highlight - Enhanced */}
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -459,7 +446,7 @@ const SoberanaLanding = () => {
         </div>
       </section>
 
-      {/* Testimonials Section - Fun & Floating */}
+      {/* Testimonials Section */}
       <section className="py-32 px-6 bg-[#fbfaf8] overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 relative">
@@ -502,7 +489,7 @@ const SoberanaLanding = () => {
         </div>
       </section>
 
-      {/* Newsletter Section - Cosmic */}
+      {/* Newsletter Section */}
       <section className="py-24 px-6 relative overflow-hidden bg-[#2a1e40]">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#2a1e40] to-[#3a2e56]"></div>
@@ -528,23 +515,24 @@ const SoberanaLanding = () => {
         </div>
       </section>
 
-      {/* Footer - Enhanced Layout */}
-      <footer id="contact" className="bg-[#1a122e] text-gray-300 py-24 px-6 border-t border-white/5 relative overflow-hidden">
+      {/* Footer - Optimized for Mobile */}
+      <footer id="contact" className="bg-[#1a122e] text-gray-300 py-16 md:py-24 px-6 border-t border-white/5 relative overflow-hidden text-center md:text-left">
         <div className="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-[#f0c755] to-transparent opacity-30"></div>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-16 relative z-10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 relative z-10">
           
-          <div className="space-y-8">
+          {/* Column 1 - Brand */}
+          <div className="space-y-6 md:space-y-8 flex flex-col items-center md:items-start">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 rounded-full border-2 border-[#f0c755] p-1 shadow-[0_0_20px_rgba(240,199,85,0.2)]">
                 <img src="./logo.png" className="w-full h-full object-cover rounded-full" alt="SC"/>
               </div>
-              <div>
+              <div className="text-left">
                 <h4 className="font-serif font-bold text-2xl text-white tracking-wide">SOBERANA COBRA</h4>
                 <p className="text-[#f0c755] text-xs tracking-[0.2em] uppercase mt-1">Spiritual Life Coach</p>
               </div>
             </div>
-            <p className="text-sm leading-7 text-gray-400 font-light">
+            <p className="text-sm leading-7 text-gray-400 font-light max-w-sm">
               Guiding you to reclaim your power through ancestral wisdom, somatic healing, and sacred immersions in the Dominican Republic.
             </p>
             <div className="flex gap-4">
@@ -556,15 +544,16 @@ const SoberanaLanding = () => {
             </div>
           </div>
 
-          <div>
-            <h5 className="text-white font-serif font-bold text-xl mb-8 flex items-center gap-2">
-              <span className="w-8 h-[2px] bg-[#f0c755]"></span> Explore
+          {/* Column 2 - Explore */}
+          <div className="flex flex-col items-center md:items-start">
+            <h5 className="text-white font-serif font-bold text-xl mb-6 md:mb-8 flex items-center gap-2">
+              <span className="w-8 h-[2px] bg-[#f0c755] hidden md:block"></span> Explore
             </h5>
             <ul className="space-y-4">
               {['Philosophy', 'Coaching Services', 'Retreat Immersions', 'About Me', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="hover:text-[#f0c755] transition flex items-center gap-3 text-sm tracking-wide group">
-                    <span className="w-1.5 h-1.5 bg-[#f0c755] rounded-full opacity-50 group-hover:scale-150 transition-all"></span>
+                  <a href="#" className="hover:text-[#f0c755] transition flex items-center gap-3 text-sm tracking-wide group justify-center md:justify-start">
+                    <span className="w-1.5 h-1.5 bg-[#f0c755] rounded-full opacity-50 group-hover:scale-150 transition-all hidden md:block"></span>
                     {item}
                   </a>
                 </li>
@@ -572,9 +561,10 @@ const SoberanaLanding = () => {
             </ul>
           </div>
 
-          <div>
-            <h5 className="text-white font-serif font-bold text-xl mb-8 flex items-center gap-2">
-               <span className="w-8 h-[2px] bg-[#f0c755]"></span> Sacred Offerings
+          {/* Column 3 - Offerings */}
+          <div className="flex flex-col items-center md:items-start">
+            <h5 className="text-white font-serif font-bold text-xl mb-6 md:mb-8 flex items-center gap-2">
+               <span className="w-8 h-[2px] bg-[#f0c755] hidden md:block"></span> Sacred Offerings
             </h5>
             <ul className="space-y-4">
               {['Ancestor Honoring', 'Tarot Readings', 'Cellular Memory', 'Root Healing', '5-Day Immersion'].map((item) => (
@@ -587,12 +577,13 @@ const SoberanaLanding = () => {
             </ul>
           </div>
 
-          <div>
-            <h5 className="text-white font-serif font-bold text-xl mb-8 flex items-center gap-2">
-               <span className="w-8 h-[2px] bg-[#f0c755]"></span> Visit Us
+          {/* Column 4 - Visit Us */}
+          <div className="flex flex-col items-center md:items-start">
+            <h5 className="text-white font-serif font-bold text-xl mb-6 md:mb-8 flex items-center gap-2">
+               <span className="w-8 h-[2px] bg-[#f0c755] hidden md:block"></span> Visit Us
             </h5>
-            <div className="space-y-6 text-sm text-gray-400 font-light">
-              <div className="flex items-start gap-4">
+            <div className="space-y-6 text-sm text-gray-400 font-light flex flex-col items-center md:items-start">
+              <div className="flex items-center md:items-start gap-4 text-center md:text-left">
                 <MapPin className="text-[#f0c755] mt-1 shrink-0" size={20} />
                 <p>North Coast Treasure Tour<br />Dominican Republic</p>
               </div>
@@ -601,7 +592,7 @@ const SoberanaLanding = () => {
                 <a href="mailto:info@soberanacobra.com" className="hover:text-white transition">info@soberanacobra.com</a>
               </div>
               
-              <div className="pt-6">
+              <div className="pt-6 w-full max-w-xs md:max-w-none">
                 <a 
                   href="#services" 
                   className="inline-block w-full text-center px-6 py-4 bg-[#3a2e56] border border-[#f0c755]/50 text-[#f0c755] font-bold rounded-xl hover:bg-[#f0c755] hover:text-[#3a2e56] transition-all shadow-lg"
@@ -613,12 +604,35 @@ const SoberanaLanding = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-600 font-medium tracking-wider">
-          <p>&copy; {new Date().getFullYear()} Soberana Cobra. All Rights Reserved.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition">Terms of Service</a>
+        {/* Footer Bottom Bar */}
+        <div className="max-w-7xl mx-auto mt-16 md:mt-20 pt-10 border-t border-white/5 flex flex-col items-center gap-8">
+          
+          <div className="flex flex-col md:flex-row justify-between w-full text-xs text-gray-600 font-medium tracking-wider gap-4">
+            <p>&copy; {new Date().getFullYear()} Soberana Cobra. All Rights Reserved.</p>
+            <div className="flex gap-8 justify-center">
+              <a href="#" className="hover:text-white transition">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition">Terms of Service</a>
+            </div>
           </div>
+
+          {/* MOGUL TAG */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3">
+            <span className="text-gray-500 text-xs flex items-center gap-1.5 font-light">
+              Created with <Heart size={12} className="text-red-500 fill-red-500 animate-pulse" /> by
+            </span>
+            <a 
+              href="https://moguldesignagency.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 px-5 py-1.5 rounded-full bg-[#1e102e] border border-white/10 hover:border-[#f0c755]/40 hover:bg-[#25143a] transition-all group shadow-lg"
+            >
+              <img src="/mdalogo.png" alt="Mogul Design Agency" className="w-4 h-4 object-contain" />
+              <span className="text-[10px] font-bold tracking-[0.2em] text-[#ffccdd] group-hover:text-white uppercase">
+                Mogul Design Agency
+              </span>
+            </a>
+          </div>
+
         </div>
       </footer>
     </div>

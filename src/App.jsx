@@ -57,30 +57,30 @@ const SoberanaLanding = () => {
 
   const services = [
     {
-      title: "Ancestor Honoring",
+      title: "Discovery Call",
       desc: "Reconnect with your lineage and heal generational patterns.",
-      link: "https://buy.stripe.com/5kQ8wPfZG6IJ9vh1sc5J600",
+      link: "https://cal.com/soberanacobra/discovery",
       icon: <Moon size={28} />,
       img: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=500"
     },
     {
       title: "Tarot Reading",
       desc: "Divine guidance to illuminate your current path.",
-      link: "https://buy.stripe.com/bJe14ndRyaYZ6j59YI5J601",
+      link: "https://cal.com/soberanacobra/intuitive-tarot-reading",
       icon: <Star size={28} />,
       img: "/tarot.webp"
     },
     {
-      title: "Cellular Memory",
+      title: "Cellular Memory (Cord Releasing)",
       desc: "Release trauma stored deep within your physical body.",
-      link: "https://buy.stripe.com/fZu3cvaFmc33dLx2wg5J602",
+      link: "https://cal.com/soberanacobra/cellular-memory-parental?date=2026-04-29",
       icon: <Wind size={28} />,
       img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=500"
     },
     {
-      title: "Root Healing",
+      title: "Cellular Healing (Parental Wound Healing)",
       desc: "Grounding work to stabilize your foundation and security.",
-      link: "https://buy.stripe.com/6oU5kDeVC0klcHt7QA5J603",
+      link: "https://cal.com/soberanacobra/cellular-memory-parental",
       icon: <Heart size={28} />,
       img: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=500"
     }

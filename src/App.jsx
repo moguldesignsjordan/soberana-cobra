@@ -175,7 +175,7 @@ const SoberanaLanding = () => {
         </AnimatePresence>
       </nav>
 
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="relative h-screen flex items-center justify-center overflow-hidden">
         <Fireflies />
         <div className="absolute inset-0 z-0">
@@ -220,7 +220,7 @@ const SoberanaLanding = () => {
               <motion.a 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="#services"
+                href="#coaching"
                 className="px-10 py-5 rounded-full font-bold text-lg shadow-[0_0_40px_rgba(240,199,85,0.4)] bg-[#f0c755] text-[#3a2e56] hover:bg-white transition-all relative overflow-hidden group"
               >
                 <span className="relative z-10">Start Your Journey</span>
